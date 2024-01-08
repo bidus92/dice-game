@@ -4,6 +4,24 @@ function randomDiceNumberGenerator()
     return n; 
 }
 
+function resetDice()
+{
+    document.querySelector(".player_1_dice > .one").classList.remove("invisible");
+    document.querySelector(".player_1_dice > .two").classList.remove("invisible");
+    document.querySelector(".player_1_dice > .three").classList.remove("invisible");
+    document.querySelector(".player_1_dice > .four").classList.remove("invisible");
+    document.querySelector(".player_1_dice > .five").classList.remove("invisible");
+    document.querySelector(".player_1_dice > .six").classList.remove("invisible");
+    document.querySelector(".player_1_dice > .hidden-center").classList.add("invisible");
+
+    document.querySelector(".player_2_dice > .one").classList.remove("invisible");
+    document.querySelector(".player_2_dice > .two").classList.remove("invisible");
+    document.querySelector(".player_2_dice > .three").classList.remove("invisible");
+    document.querySelector(".player_2_dice > .four").classList.remove("invisible");
+    document.querySelector(".player_2_dice > .five").classList.remove("invisible");
+    document.querySelector(".player_2_dice > .six").classList.remove("invisible");
+    document.querySelector(".player_2_dice > .hidden-center").classList.add("invisible");
+}
  
 function diceRoll(playerNumber)
 {
@@ -163,13 +181,7 @@ function verdict()
 }
 
 
-window.onbeforeunload = verdict(); 
-
-if(window.sessionStorage.getItem('flag')===null)
-  {
-    document.querySelector("#winner-verdict").textContent = "Refresh to Play!";
-    sessionStorage.setItem('flag','1');
-  }
+document.querySelector("#winner-verdict").addEventListener("click", verdict);
 
 
 
