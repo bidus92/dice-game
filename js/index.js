@@ -165,6 +165,13 @@ function verdict()
 
 window.onbeforeunload = verdict(); 
 
+if(window.sessionStorage.getItem('flag')===null)
+  {
+    document.querySelector("#winner-verdict").textContent = "Refresh to Play!";
+    sessionStorage.setItem('flag','1');
+  }
+
+
 
 
 
