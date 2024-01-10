@@ -150,3 +150,66 @@ body
 {
     visibility: hidden;
 }
+
+
+
+@media(max-width: 430px)
+{
+
+    .flex-container
+    {
+        display: flex; 
+        justify-content: center;
+        align-items: center;  
+    }
+    
+
+    #winner-verdict
+    {
+        font-family: Euphoria Script;
+        text-align: start;
+        font-size: 3rem;
+        color: white; 
+        padding: 0px; 
+    }
+
+
+    .dice-block
+    {
+        width: 130px; 
+        height: 130px; 
+    }
+
+    .dice-circle
+    {
+        width: 20px; 
+        height: 20px;
+        margin-left: 10px;
+        margin-top: 17px;
+    }
+    .dice
+    {
+        gap: 50px;
+        margin-right: 10px
+        
+    }
+
+    .dice-circle-grid
+    {
+        gap: 1px;
+    }
+
+    #link
+    {
+        margin-right: 10px
+    }
+
+    .player-names
+    {
+        font-family:'Courier New', Courier, monospace;
+        font-size: 15pt;
+        gap: 68px;
+    }
+
+
+}
